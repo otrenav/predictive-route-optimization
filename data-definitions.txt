@@ -1,0 +1,34 @@
+
+# Northern Motorway Road Segments.csv
+
+### Geometry data for the Northern Motorway road segments.
+
+EROAD uses a third party to monitor changes to the road network and provide a
+dataset of geometry and attributes such as name, location, road speed. The
+dataset we provided you in this file is a subset of our road segments that
+include the Northern Motorway, and surrounding roads. We've including associated
+entries and exits, Northern Busway, and a few side roads.
+
+Features:
+* id: unique id for each road segment
+* full_name: Name of the road_segment, Integers represent motorway exits, Motorway Entries are shown as null.
+* road_segment_wkt: Road geometry in Well Known Text format.  The SRID of the geometry is 4326.
+
+# machines.zip
+
+### Individual files by machine showing events on and around the Northern Motorway
+
+The Event Dataset consists of 1600 csv files. Each file contains event data for
+a single vehicle travelling on or near the Northern Motorway from 16 Nov 2015 to
+20 Nov 2015. The events are spaced approximately every 250m, but there may be
+some tighter spacing around corners, or around stopped events.
+
+Features:
+* id: unique id for each event
+* event_timestamp: the exact time the vehicle was in the location. format is yyyy-MM-dd HH:mm:ss.  The time zone is UTC.
+* course_over_ground: direction the vehicle was travelling at the time of the event.
+* machine_id:  unique identifier for the vehicle
+* vehicle_weight_type:  'LIGHT' or 'HEAVY' classification from NZTA. 'HEAVY' vehicles are those with a gross weight of 3.5 tonnes and over.
+* speed_gps_kph: speed in Km/h of the vehicle at the time of the event
+* latitude: latitude in decimal degrees
+* longitude: longitude in decimal degrees
